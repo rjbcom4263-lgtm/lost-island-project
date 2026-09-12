@@ -1,4 +1,5 @@
 - [홈](/)
+- [살아 있는 세계지도 ↗](/explore/ ':ignore')
 - 프로젝트
   - [비전](docs/00-project/vision.md)
 - 세계관

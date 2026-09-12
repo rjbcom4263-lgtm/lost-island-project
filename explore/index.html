@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102522">
+  <meta name="description" content="사라진섬 탐험 지도. 낯선 섬을 살펴보고, 움직이는 공룡을 관찰하세요.">
+  <title>살아 있는 세계지도 · 사라진섬</title>
+  <link rel="stylesheet" href="./vendor/leaflet.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <a class="skip-link" href="#map">지도로 바로 이동</a>
+  <header class="masthead">
+    <a class="brand" href="../" aria-label="사라진섬 위키 홈">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><path d="m20 3 5 17-5 17-5-17Z"/><path d="M3 20h34M20 0v7m0 26v7"/></svg>
+      <span>사라진섬<small>PROJECT LOST ISLAND</small></span>
+    </a>
+    <nav class="top-nav" aria-label="주 메뉴"><span class="active">세계지도</span><a href="../#/docs/01-worldbuilding/story-overview">세계관</a><a href="../#/docs/04-development/roadmap">개발 기록</a></nav>
+    <div class="edition"><span class="live-dot"></span> 탐험 미리보기 <span class="version">VOL. 01</span></div>
+  </header>
+
+  <main class="atlas">
+    <aside class="directory" aria-label="권역 탐색">
+      <div class="directory-heading"><span class="eyebrow">FIELD ATLAS / +17</span><h1>지도 밖의<br>세계로.</h1><p>사라진 땅에서, 다시 시작되는 발견.</p></div>
+      <label class="search-field"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="권역 이름 검색" aria-label="권역 이름 검색" autocomplete="off"><kbd>/</kbd></label>
+      <div class="filters" role="group" aria-label="탐험 단계 필터">
+        <button class="filter active" data-stage="0" aria-pressed="true">전체</button>
+        <button class="filter" data-stage="1" aria-pressed="false">I</button>
+        <button class="filter" data-stage="2" aria-pressed="false">II</button>
+        <button class="filter" data-stage="3" aria-pressed="false">III</button>
+        <button class="filter" data-stage="4" aria-pressed="false">IV</button>
+      </div>
+      <div class="list-caption"><span>탐사 권역</span><span id="region-count">14</span></div>
+      <div id="region-list" class="region-list"></div>
+      <div class="directory-footer"><span class="tiny-compass">✧</span><p>모든 발견은<br>첫 발걸음에서 시작된다.</p><span>01—14</span></div>
+    </aside>
+
+    <section class="map-column" aria-label="세계 탐험 지도">
+      <div class="map-toolbar"><div><span class="live-dot"></span><strong>개척 관측도</strong><span class="draft-tag">콘셉트 초안</span></div><button id="wide-mode" class="quiet-button" aria-pressed="false">넓게 보기 ↗</button></div>
+      <div class="map-frame">
+        <div id="map" aria-label="사라진섬 지도. 방향키로 이동하고 더하기와 빼기로 확대·축소할 수 있습니다."></div>
+        <div class="map-vignette" aria-hidden="true"></div>
+        <div class="map-top-note"><span class="eyebrow">EXPLORE THE UNKNOWN</span><span>아직 닿지 않은 곳에, 또 다른 세계가 있다.</span></div>
+        <div class="map-controls" aria-label="지도 조작">
+          <button id="zoom-in" aria-label="지도 확대">+</button><button id="zoom-out" aria-label="지도 축소">−</button><button id="reset-map" aria-label="지도 전체 보기">⌖</button>
+        </div>
+        <div class="map-options">
+          <label><input id="show-creatures" type="checkbox" checked><span class="option-dot creature-dot"></span>생물</label>
+          <label><input id="show-routes" type="checkbox" checked><span class="option-dot route-dot"></span>탐사 항로</label>
+          <button id="pause" aria-pressed="false">Ⅱ 일시정지</button>
+        </div>
+        <div class="map-help">드래그로 이동 · 스크롤로 확대 · 생물을 눌러 관찰</div>
+        <div id="map-error" class="map-error" role="alert" hidden>지도를 불러오지 못했어요. <a href="../#/docs/01-worldbuilding/world-map-concept-v1">지도 이미지 보기</a></div>
+      </div>
+      <footer class="map-footer"><span><i class="live-dot"></i><span id="activity">생태 움직임 재생 중</span></span><span>2D 관찰 시뮬레이션 · 배치 및 수치는 초안</span></footer>
+    </section>
+
+    <aside class="inspector" aria-label="선택한 권역과 생물">
+      <section class="region-detail"><div class="eyebrow">REGION RECORD <span id="record-number">03 / 14</span></div><div id="region-stage" class="stage-label">I · 첫 번째 탐사권</div><h2 id="region-title">초원 대륙</h2><p id="region-description"></p><div class="region-facts"><div><span>환경</span><strong id="region-biome"></strong></div><div><span>탐사 준비</span><strong id="region-gear"></strong></div></div><div class="detail-label">탐험 자원</div><div id="region-resources" class="resource-tags"></div></section>
+      <section class="specimen-section"><div class="section-caption"><h3>생물 관찰</h3><span>FIELD NOTES</span></div><div class="specimen-stage"><span class="specimen-grid" aria-hidden="true"></span><div id="specimen-art"></div><span class="specimen-caption">움직이는 생태 스케치</span></div><div class="species-heading"><h3 id="species-name"></h3><span id="species-kind"></span></div><p id="species-description"></p><div id="species-picker" class="species-picker" role="group" aria-label="관찰할 생물 선택"></div><button id="find-creature" class="primary-button">지도에서 찾아보기 <span>↗</span></button><p class="specimen-note">이동·날갯짓을 표현한 2D 미리보기입니다.<br>익룡·해양 파충류도 함께 관찰할 수 있어요.</p></section>
+      <a class="lore-link" href="../#/docs/01-worldbuilding/world-map-concept-v1"><span>이 지도의 이야기 읽기<small>세계지도 콘셉트와 설정 초안</small></span><span>↗</span></a>
+    </aside>
+  </main>
+  <div id="announcement" class="sr-only" aria-live="polite"></div>
+  <noscript><p class="noscript">움직이는 지도에는 JavaScript가 필요합니다. <a href="../docs/01-worldbuilding/assets/world-map-concept-v1.png">지도 이미지 열기</a></p></noscript>
+  <script src="./vendor/leaflet.js"></script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
