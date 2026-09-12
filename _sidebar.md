@@ -1,6 +1,13 @@
 - [홈](/)
 - 프로젝트
   - [비전](docs/00-project/vision.md)
+- 세계관
+  - [세계관 문서 안내](docs/01-worldbuilding/README.md)
+  - [World Bible v0.1](docs/01-worldbuilding/world-bible.md)
+  - [세계 구조](docs/01-worldbuilding/world-structure.md)
+  - [생태계](docs/01-worldbuilding/ecology.md)
+  - [세력](docs/01-worldbuilding/factions.md)
+  - [세계 연표](docs/01-worldbuilding/timeline.md)
 - 게임 디자인
   - [핵심 게임 루프](docs/01-game-design/core-loop.md)
   - [월드 설계](docs/01-game-design/world.md)
@@ -10,6 +17,9 @@
 - 연구 자료
   - [운영 원칙](docs/03-research/research-policy.md)
   - [Durango Server 노트](docs/03-research/durango-server-notes.md)
+  - [Durango 구조 해부](docs/03-research/durango-structure-analysis.md)
+- 공개 위키 콘텐츠
+  - [Astro Lore 연동](wiki/astrolore-integration.md)
 - 개발
   - [MVP 0.1](docs/04-development/mvp-0.1.md)
   - [로드맵](docs/04-development/roadmap.md)
@@ -17,4 +27,3 @@
   - [ADR-0001 프로젝트 정체성](docs/05-decisions/ADR-0001-project-identity.md)
   - [ADR-0002 싱글·멀티 구조](docs/05-decisions/ADR-0002-single-multiplayer.md)
 - [기여 가이드](CONTRIBUTING.md)
-

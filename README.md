@@ -17,8 +17,8 @@
 ```text
 lost-island-project/
 ├─ docker-compose.yml       # Wiki.js + PostgreSQL
-├─ docs/                    # Git으로 관리하는 원본 설계 문서
-├─ wiki/                    # 위키 운영/가져오기 안내
+├─ docs/                    # Git으로 관리하는 원본 설계/세계관/연구 문서
+├─ wiki/                    # Wiki.js 운영 + Astro Lore 공개 위키 콘텐츠
 └─ scripts/                 # 로컬 실행 스크립트
 ```
 
@@ -88,6 +88,10 @@ docker compose down -v
 
 - [프로젝트 비전](docs/00-project/vision.md)
 - [핵심 게임 루프](docs/01-game-design/core-loop.md)
+- [세계관 바이블 v0.1](docs/01-worldbuilding/world-bible.md)
+- [세계 구조](docs/01-worldbuilding/world-structure.md)
+- [듀랑고 구조 해부](docs/03-research/durango-structure-analysis.md)
+- [Astro Lore 연동](wiki/astrolore-integration.md)
 - [기술 아키텍처](docs/02-technical/architecture.md)
 - [MVP 0.1](docs/04-development/mvp-0.1.md)
 - [연구 자료 운영 원칙](docs/03-research/research-policy.md)
@@ -95,3 +99,10 @@ docker compose down -v
 ## 라이선스
 
 아직 프로젝트 라이선스를 확정하지 않았습니다. 외부 공개/기여를 받기 전에 라이선스를 결정합니다.
+
+## Worldbuilding Skill
+
+Reusable worldbuilding rules for the project live at:
+`skills/lost-island-worldbuilding/SKILL.md`
+
+Use this skill when creating or revising canonical lore and Astro Lore content. It keeps research separate from canon, checks continuity, and defines the MDX/YAML publishing workflow.
