@@ -1,6 +1,7 @@
 # 세계관 문서 인덱스
 
 - [세계 이야기 개요 (Canon)](story-overview.md)
+- [대공백 (Canon)](blank-tide.md)
 - [World Bible v0.1](world-bible.md)
 - [세계 구조](world-structure.md)
 - [생태계](ecology.md)

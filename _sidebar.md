@@ -4,6 +4,7 @@
 - 세계관
   - [세계관 문서 안내](docs/01-worldbuilding/README.md)
   - [세계 이야기 개요](docs/01-worldbuilding/story-overview.md)
+  - [대공백](docs/01-worldbuilding/blank-tide.md)
   - [World Bible v0.1](docs/01-worldbuilding/world-bible.md)
   - [세계 구조](docs/01-worldbuilding/world-structure.md)
   - [생태계](docs/01-worldbuilding/ecology.md)
