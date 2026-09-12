@@ -6,17 +6,29 @@
   <meta name="description" content="사라진섬 프로젝트 개발 위키">
   <title>사라진섬 프로젝트</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4.13.1/lib/themes/vue.css">
+  <style>
+    .edit-link { margin-top: 3rem; text-align: right; }
+  </style>
 </head>
 <body>
   <div id="app">위키를 불러오는 중입니다…</div>
   <script>
     window.$docsify = {
       name: '사라진섬 프로젝트',
-      repo: '',
+      repo: 'https://github.com/rjbcom4263-lgtm/lost-island-project',
       loadSidebar: true,
       alias: { '/.*/_sidebar.md': '/_sidebar.md' },
       auto2top: true,
       subMaxLevel: 2,
+      plugins: [
+        function (hook, vm) {
+          hook.afterEach(function (html) {
+            var file = (vm.route.file || 'README.md').replace(/^\/+/, '');
+            var url = 'https://github.com/rjbcom4263-lgtm/lost-island-project/edit/main/' + file;
+            return html + '<p class="edit-link"><a href="' + url + '" target="_blank" rel="noopener">✏️ GitHub에서 이 문서 수정</a></p>';
+          });
+        }
+      ],
       search: {
         placeholder: '문서 검색',
         noData: '검색 결과가 없습니다.'
