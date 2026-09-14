@@ -20,6 +20,7 @@
   - [저장과 영속성](docs/02-technical/persistence.md)
 - 연구 자료
   - [운영 원칙](docs/03-research/research-policy.md)
+  - [Durango V2 파일 감사](docs/03-research/durango-file-audit.md)
   - [Durango Server 노트](docs/03-research/durango-server-notes.md)
   - [Durango 구조 해부](docs/03-research/durango-structure-analysis.md)
 - 공개 위키 콘텐츠
