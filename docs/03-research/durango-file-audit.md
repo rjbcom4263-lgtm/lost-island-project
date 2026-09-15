@@ -21,6 +21,19 @@
 | `Notion Setup 7.33.0.exe` | Notion 설치 프로그램 | 프로젝트와 무관 |
 | `README.md` | Kyllox의 별도 Durango V2 프로젝트 설명 | 기능 아이디어만 연구자료로 참고 |
 
+## 이번 추가 목록 확인
+
+| 파일 | 확인 결과 | 사라진섬에서의 사용 |
+|---|---|---|
+| `app.info` | `NEXON Korea / Durango: Wild Lands` 식별 문구 | 원본 빌드 식별 정보로만 기록 |
+| `boot.config` | Unity 부트 설정 1개(`wait-for-native-debugger=0`) | 설정을 복사하지 않음 |
+| `version.txt` | 빌드 표기 `2.3` | 버전 기록으로만 참고 |
+| `globalgamemanagers*` | Unity 전역 매니저와 리소스 스트림 바이너리 | 열기·추출·재사용하지 않음 |
+| `level0`~`level3` 및 `.resS` | Unity 씬 데이터와 연결 리소스 스트림 | 우리 월드 씬으로 사용하지 않음 |
+| `resources.assets*`, `sharedassets*` | Unity 직렬화 에셋과 대용량 리소스 스트림 | 에셋 추출·변환·재포장하지 않음 |
+
+이번 목록에서 확인된 값은 **어떤 Unity 버전/빌드에서 만들어졌는지**를 판단하는 데는 유용하지만, 사라진섬의 코드·모델·텍스처·씬으로 바로 가져다 쓸 수 있는 원본은 아니다.
+
 ## 모델링·애니메이션 확인
 
 독립된 `.fbx`, `.obj`, `.gltf`, `.glb`, `.blend`, `.dae` 파일은 확인되지 않았다. 대신 `DurangoV2_Data/StreamingAssets/AssetBundles` 아래에 다음과 같은 Unity 번들이 확인된다.
