@@ -31,4 +31,9 @@
 - 결정 기록
   - [ADR-0001 프로젝트 정체성](docs/05-decisions/ADR-0001-project-identity.md)
   - [ADR-0002 싱글·멀티 구조](docs/05-decisions/ADR-0002-single-multiplayer.md)
+  - [ADR-0003 Unity 6 LTS + HDRP](docs/05-decisions/ADR-0003-engine-unity-hdrp.md)
+  - [ADR-0004 순수 C# Simulation](docs/05-decisions/ADR-0004-pure-csharp-simulation.md)
+  - [ADR-0005 콘텐츠 데이터 JSON](docs/05-decisions/ADR-0005-content-data-json.md)
+  - [ADR-0006 게임 저장소 구조](docs/05-decisions/ADR-0006-game-repo-layout.md)
+- [용어집 (CONTEXT)](CONTEXT.md)
 - [기여 가이드](CONTRIBUTING.md)
