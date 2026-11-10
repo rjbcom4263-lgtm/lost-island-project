@@ -3,7 +3,7 @@
 ## Phase 0 — Foundation
 - 공동 위키
 - GitHub 운영 규칙
-- 엔진 결정
+- ~~엔진 결정~~ → Unity 6 LTS + HDRP ([ADR-0003](../05-decisions/ADR-0003-engine-unity-hdrp.md))
 - 핵심 시스템 인터페이스 정의
 
 ## Phase 1 — First Camp

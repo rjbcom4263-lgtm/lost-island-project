@@ -94,6 +94,7 @@ docker compose down -v
 - [세계 구조](docs/01-worldbuilding/world-structure.md)
 - [듀랑고 구조 해부](docs/03-research/durango-structure-analysis.md)
 - [Astro Lore 연동](wiki/astrolore-integration.md)
+- [용어집 (CONTEXT)](CONTEXT.md)
 - [기술 아키텍처](docs/02-technical/architecture.md)
 - [MVP 0.1](docs/04-development/mvp-0.1.md)
 - [연구 자료 운영 원칙](docs/03-research/research-policy.md)
